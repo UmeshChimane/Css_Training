@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 40px;
+
+    font-family: Arial, sans-serif;
+
+    background: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+    border-radius: 15px;
+
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   LINEAR GRADIENTS
+   ========================= */
+
+/* Left → Right */
+.linear-1 {
+    background: linear-gradient(
+        to right,
+        blue,
+        purple
+    );
+}
+
+
+/* Diagonal */
+.linear-2 {
+    background: linear-gradient(
+        135deg,
+        orange,
+        red,
+        purple
+    );
+}
+
+
+/* Multiple colors */
+.linear-3 {
+    background: linear-gradient(
+        to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        purple
+    );
+}
+
+
+/* =========================
+   RADIAL GRADIENTS
+   ========================= */
+
+/* Circle */
+.radial-1 {
+    background: radial-gradient(
+        circle,
+        white,
+        blue,
+        purple
+    );
+}
+
+
+/* Ellipse */
+.radial-2 {
+    background: radial-gradient(
+        ellipse,
+        yellow,
+        orange,
+        red
+    );
+}
+
+
+/* Gradient from a specific position */
+.radial-3 {
+    background: radial-gradient(
+        circle at top left,
+        white,
+        blue,
+        purple
+    );
+}
+
+
+/* =========================
+   CONIC GRADIENTS
+   ========================= */
+
+/* Basic conic gradient */
+.conic-1 {
+    background: conic-gradient(
+        blue,
+        purple,
+        pink,
+        blue
+    );
+}
+
+
+/* Multiple colors */
+.conic-2 {
+    background: conic-gradient(
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        purple,
+        red
+    );
+}
+
+
+/* Starting angle */
+.conic-3 {
+    background: conic-gradient(
+        from 90deg,
+        blue,
+        purple,
+        pink,
+        blue
+    );
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+}
